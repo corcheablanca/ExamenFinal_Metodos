@@ -4,7 +4,15 @@
 import numpy as np
 
 x = np.int_(np.random.random(100)*1000)
-print(x)
 
+a=0
+i=0
+while (i==0):
+    a=a+1
+    if(x[a]>800):
+        i=1
+    if(x[a]%2!=0 and x[a]<800):
+        print(x[a])
+    
 
 
