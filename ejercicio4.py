@@ -7,11 +7,10 @@
 # la transformada inversa para graficar la nueva senal (figura 'filtro.png')
 
 import numpy as np
-import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from scipy.fftpack import fft, fftfreq
+
 
 n = 512 # number of point in the whole interval
 f = 200.0 #  frequency in Hz
@@ -36,7 +35,7 @@ def furier(x):
         for k in range (n):
             lista.append(y[k]*np.exp(-j*np.pi*k*(i/n)))
 
-frecuencias= numpy.fft.fftfreq(t)
+frecuencias= np.fft.fftfreq(t)
 
 plt.figure()
 plt.plot(frecuancias,furier(y))
